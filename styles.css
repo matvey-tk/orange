@@ -1,0 +1,67 @@
+*
+{
+    box-sizing: border-box;
+}
+
+body, html
+{
+    background-color: var(--bg-color);
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.core
+{
+    width: 50vw;
+    margin-left: auto;   
+    margin-right: auto;
+    text-align: left;
+    padding: 15px;
+    transition: width 0.3s ease;
+}
+
+.logo
+{
+    font-size: 15vmin;
+    color: var(--active-color);
+}
+
+.header-title
+{
+    color: var(--text-color2);
+    text-align: center;
+    font-size: 3.4vmin;
+}
+
+.header-underline
+{
+    height: 3px;
+    background-color: var(--bg-color2);
+    width: 55vmin;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media only screen and (max-width: 918px) 
+{
+    .core
+    {
+        width: 85vw;
+    }
+}
+
+@media only screen and (min-width: 919px) and (max-width: 1200px) 
+{
+    .core
+    {
+        width: 75vw;
+    }
+}
+
+@media only screen and (min-width: 1201px) and (max-width: 1700px) 
+{
+    .core
+    {
+        width: 65vw;
+    }
+}

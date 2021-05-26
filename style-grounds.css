@@ -1,0 +1,62 @@
+.-sg-row
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.-sg-column
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.-sg-vertical-c-center
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.-sg-vertical-r-center
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.-sg-c-center
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.-sg-flex-grow
+{
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.-sg-flex-onlygrow
+{
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+.-sg-flex-onlyshrink
+{
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+.-sg-flex-none
+{
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.-sg-active-text
+{
+    color: var(--active-color);
+}
