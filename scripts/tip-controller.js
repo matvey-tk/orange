@@ -94,34 +94,45 @@ class TipController
 
 // Sidebar tip controller.
 let sidebarTipContainer = document.getElementById("sidebar-tip");
-let sidebarHoverContainer = sidebarTipContainer.parentElement.parentElement;
-
-let drillUpSidebarButton = (element) =>
+if (sidebarTipContainer)
 {
-    if (!element)
+    let sidebarHoverContainer = sidebarTipContainer.parentElement.parentElement;
+    
+    let drillUpSidebarButton = (element) =>
     {
-        return null;
-    }
-    else if (element.classList && element.classList.contains("sidebar-button"))
+        if (!element)
+        {
+            return null;
+        }
+        else if (element.classList && element.classList.contains("sidebar-button"))
+        {
+            return element;
+        }
+        else if (element.parentElement)
+        {
+            return drillUpSidebarButton(element.parentElement);
+        }
+        else
+        {
+            return null;
+        }
+    };
+    
+    new TipController("sidebar", sidebarTipContainer, sidebarHoverContainer, (e) =>
     {
-        return element;
-    }
-    else if (element.parentElement)
-    {
-        return drillUpSidebarButton(element.parentElement);
-    }
-    else
-    {
-        return null;
-    }
-};
+        if (e.target)
+        {
+            let button = drillUpSidebarButton(e.target);
+            return !!button;
+        }
+        return false;
+    });
+}
 
-new TipController("sidebar", sidebarTipContainer, sidebarHoverContainer, (e) =>
+// Cases tip controller.
+let casesTipContainer = document.getElementById("cases-tip");
+if (casesTipContainer)
 {
-    if (e.target)
-    {
-        let button = drillUpSidebarButton(e.target);
-        return !!button;
-    }
-    return false;
-});
+    let casesHoverContainer = casesTipContainer.parentElement;
+    new TipController("cases", casesTipContainer, casesHoverContainer);
+}

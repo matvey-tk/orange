@@ -17,6 +17,7 @@ body, html
     margin-right: auto;
     text-align: left;
     padding: 15px;
+    padding-top: 60px;
     transition: width 0.3s ease;
 }
 
@@ -30,6 +31,7 @@ body, html
 {
     font-size: 10vmin;
     color: var(--active-color);
+    height: 15vmin;
 }
 
 .header-title
@@ -126,10 +128,15 @@ p
     bottom: 10%;
 }
 
+.cases-tip
+{
+    right: calc(100% + 30px);
+}
+
 .tip-bubble
 {
-    background-color: var(--bg-color3);
-    color: var(--text-color2);
+    background-color: var(--balloon-color);
+    color: var(--text-color);
     text-align: center;
     border-radius: 6px;
     padding: 5px 12px;
@@ -148,7 +155,100 @@ p
     margin-top: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: transparent var(--bg-color3) transparent transparent;
+    border-color: transparent var(--balloon-color) transparent transparent;
+}
+
+.tip-bubble[left]::after 
+{
+    content: "";
+    position: absolute;
+    top: 40%;
+    left: 100%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent var(--balloon-color);
+}
+
+.case:first-of-type
+{
+    margin-top: 60px;
+}
+
+.case
+{
+    border-radius: 8px;
+    background-color: var(--bg-color2);
+    color: var(--text-color);
+    padding: 15px 15px 5px 15px;
+    text-align: left;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.case > .case-title
+{
+    text-align: right;
+    font-size: 2vmin;
+    font-weight: 600;
+}
+
+.case > .toggled-content
+{
+    display: none;
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.case > .toggled-content > .line
+{
+    position: relative;
+    width: calc(100% - 20px);
+    margin-left: auto;
+    margin-right: auto;
+    height: 2px;
+    background-color: var(--bg-color3);
+    opacity: 0.3;
+}
+
+.case > .toggled-content .case-heading, .case > .toggled-content p
+{
+    text-align: left;
+}
+
+.case > .toggled-content .case-heading
+{
+    font-weight: 600;
+}
+
+.case > .toggle
+{
+    font-size: 30px;
+    cursor: pointer;
+    text-align: right;
+    transition: 0.3s ease;
+    position: relative;
+}
+
+.case > .toggle:hover
+{
+    color: var(--active-color);
+    transition: 0.3s ease;
+}
+
+.case[toggled="true"] > .toggle > .toggle-on-icon
+{
+    display: none;
+}
+
+.case[toggled="false"] > .toggle > .toggle-off-icon
+{
+    display: none;
+}
+
+.case[toggled="true"] > .toggled-content
+{
+    display: block;
 }
 
 @media only screen and (max-width: 918px) 

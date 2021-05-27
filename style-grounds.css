@@ -1,3 +1,23 @@
+.-sg-margin-b
+{
+    margin-bottom: 10px !important;
+}
+
+.-sg-margin-t
+{
+    margin-top: 10px !important;
+}
+
+.-sg-margin-b2
+{
+    margin-bottom: 20px !important;
+}
+
+.-sg-margin-t2
+{
+    margin-top: 20px !important;
+}
+
 .-sg-row
 {
     display: flex;
