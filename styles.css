@@ -20,6 +20,12 @@ body, html
     transition: width 0.3s ease;
 }
 
+.content
+{
+    display: flex;
+    flex-direction: row;
+}
+
 .logo
 {
     font-size: 15vmin;
@@ -42,11 +48,81 @@ body, html
     margin-right: auto;
 }
 
+.sidebar > *
+{
+    margin-bottom: 10px;
+}
+
+.sidebar > .sidebar-button
+{
+    font-size: 3vmin;
+    border: 3px solid var(--text-color);
+    color: var(--text-color);
+    background-color: transparent;
+    padding: 5px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5px;
+    transition: 0.3s ease;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.sidebar > .sidebar-button .legend
+{
+    width: 0;
+    opacity: 0;
+    font-size: 2vmin;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.sidebar > .sidebar-button:hover, .sidebar > .sidebar-button[active]
+{
+    transition: 0.3s ease;
+    border: 3px solid var(--active-color);
+    background-color: var(--active-color);
+    color: var(--text-color2);
+    width: 200px;
+}
+
+.sidebar > .sidebar-button:hover .legend, .sidebar > .sidebar-button[active] .legend
+{
+    width: auto;
+    padding-right: 8px;
+    padding-left: 8px;
+    opacity: 1;
+    flex-grow: 1;
+}
+
 @media only screen and (max-width: 918px) 
 {
     .core
     {
         width: 85vw;
+    }
+
+    .content
+    {
+        flex-direction: column;
+    }
+
+    .sidebar-button
+    {
+        width: auto !important;
+        padding-left: 20px !important;
+    }
+
+    .sidebar-button .legend
+    {
+        font-size: 3.5vmin !important;
+        opacity: 1 !important;
+        width: auto !important;
+        padding-left: 15px !important;
     }
 }
 
