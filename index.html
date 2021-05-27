@@ -14,22 +14,25 @@
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
         <script src="https://kit.fontawesome.com/08b1b5cfb2.js" crossorigin="anonymous"></script>
+
+        <script src="./tip-controller.js" defer></script>
     </head>
 
     <body>
         <div class="core">
             <div class="header -sg-vertical-r-center">
-                <a class="logo -sg-flex-none" href="./index.html">
-                    <i class="fas fa-certificate"></i>
-                </a>
                 <div class="header-title -sg-flex-grow -sg-column">
                     <span>Business Is Stuck In <b class="-sg-active-text">Yesterday</b></span>
                     <div class="header-underline"></div>
                 </div>
             </div>
 
-            <div class="content">
-                <div class="sidebar -sg-column">
+            <div class="body">
+                <div class="sidebar -sg-column -sg-flex-none">
+                    <a class="logo -sg-flex-none" href="./index.html">
+                        <i class="fas fa-certificate"></i>
+                    </a>
+
                     <a class="sidebar-button" href="./index.html" active>
                         <span class="-sg-vertical-r-center">
                             <i class="fas fa-home"></i>
@@ -55,7 +58,29 @@
                                 Archive
                             </span>
                         </span>
+
+                        <div id="sidebar-tip" class="tip-bubble sidebar-tip" right>
+                            Hover to see pages!
+                        </div>
                     </a>
+                </div>
+
+                <div class="content -sg-flex-grow">
+                    <p>
+                        We are a team at AUT looking at businesses around the world and seeing who is stuck in yesterday's technology.
+                    </p>
+
+                    <p>
+                        We believe there are gaps in incorporation all around.<br> Technology is growing but many resist the change.
+                    </p>
+
+                    <p>
+                        We would like to investigate why this is and what fields in particular are lacking.
+                    </p>
+
+                    <p>
+                        We believe there are ethical and legal cases but the majority may just be ignorant and scared to try move forward.
+                    </p>
                 </div>
             </div>
         </div>

@@ -60,3 +60,21 @@
 {
     color: var(--active-color);
 }
+
+.-sg-fadeout
+{
+    opacity: 0;
+    animation: -sg-animation-fadeout 0.3s ease-in-out 1;
+}
+
+@keyframes -sg-animation-fadeout
+{
+    0% 
+    {
+        opacity: 1;
+    }
+    100% 
+    {
+        opacity: 0;
+    }
+}
