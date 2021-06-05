@@ -263,6 +263,37 @@ a, li
     text-align: left;
 }
 
+.meeting:first-of-type
+{
+    margin-top: 60px;
+}
+
+.meeting
+{
+    border-radius: 8px;
+    background-color: var(--bg-color2);
+    color: var(--text-color);
+    padding: 15px 15px 5px 15px;
+    text-align: left;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.meeting > .meeting-title
+{
+    text-align: right;
+    font-size: 2vmin;
+    font-weight: 600;
+}
+
+.meeting > .timestamp
+{
+    text-align: right;
+    font-size: 1.4vmin;
+    font-style: italic;
+    opacity: 0.8;
+}
+
 @media only screen and (max-width: 918px) 
 {
     .core
