@@ -185,6 +185,12 @@ p
     position: relative;
 }
 
+.case > .caption
+{
+    font-size: 1.6vmin;
+    opacity: 0.8;
+}
+
 .case > .case-title
 {
     text-align: right;
